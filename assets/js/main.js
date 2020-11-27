@@ -1,6 +1,6 @@
 // List of sentences
 var _CONTENT = [ 
-	"Thomas \"tholeb\" Lebreton", 
+	"Thomas Lebreton", 
 	"French student", 
 	"Full stack developer", 
 	"Roleplayer"
@@ -67,5 +67,20 @@ function Delete() {
 	}
 }
 
-// Start the typing effect on load
-_INTERVAL_VAL = setInterval(Type, 100);
+function headereffects() {
+	// Start the typing effect on load
+	_INTERVAL_VAL = setInterval(Type, 200);
+	setTimeout(function () {
+		// Obfuscator
+		const text = baffle(".data");
+		text.set({
+			characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
+			speed: 200
+		});
+		text.start();
+		text.reveal(4000);
+	}, 3000);  
+}
+
+
+headereffects();
