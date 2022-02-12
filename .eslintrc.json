@@ -29,6 +29,7 @@
         "tailwindcss"
     ],
     "rules": {
+        "tailwindcss/no-custom-classname": 0,
         "brace-style": [
             "warn",
             "stroustrup",

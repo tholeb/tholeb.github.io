@@ -10,7 +10,7 @@ export const useTitle = (title: String) => {
 		title && (document.title += ` - ${title}`);
 		// following line is optional, but will reset title when component unmounts
         return () => {
-            document.title = oldTitle
+            document.title = oldTitle;
             return;
         };
 	}, [title]);
