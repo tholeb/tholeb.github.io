@@ -10,7 +10,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --fix --resolve-plugins-relative-to .",
     "tailwind:build": "npx tailwindcss -o src/assets/css/build.css --minify -c tailwind.config.js",
-    "predeploy": "npm run lint && npm run tailwind:build && npm run build",
+    "predeploy": "npm run lint && npm run tailwind:build && npm run build && cp CNAME build/CNAME",
     "deploy": "NODE_ENV=production gh-pages -d build"
   },
   "eslintConfig": {
