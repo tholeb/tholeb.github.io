@@ -4,6 +4,13 @@ import './assets/css/tailwind.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Import minifed build on production
+if (process.env.NODE_ENV === 'production') {
+  require('./assets/css/build.css')
+} else {
+  require('./assets/css/tailwind.css')
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
