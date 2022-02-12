@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Particles from "react-tsparticles";
+import particlesOptions from "./assets/particles.json";
+import { ISourceOptions } from "tsparticles";
+import './assets/css/App.css';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Particles options={particlesOptions as ISourceOptions}/>
+            <header className="App-header">
+                <h1 className='text-neutral-500 text-4xl'>
+                    Work In Progress <span className="ellipsis-anim"><span>.</span><span>.</span><span>.</span></span>
+                </h1>
+                <h6 className='text-neutral-600 text-2xl'>
+                    Coming soon <i className='text-sm'>(maybe)</i>
+                </h6>
+            </header>
+        </div>
+    );
 }
 
 export default App;
