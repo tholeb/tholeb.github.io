@@ -10,7 +10,7 @@
     "lint": "eslint --ext .ts,.tsx ./src",
 		"lint:fix": "npm run lint -- --fix",
     "predeploy": "npm run lint:fix && npm run build && cp CNAME build/CNAME",
-    "deploy": "NODE_ENV=production gh-pages -d build -m \"Deployed latest build\""
+    "deploy": "NODE_ENV=production gh-pages -d build -m \"Deployed latest build : $(git show -s --format='%h' | cat) \n > git show -s --format='%h: %s'\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
