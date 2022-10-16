@@ -1,4 +1,5 @@
-import './styles/index.css';
+import './assets/styles/index.scss';
+import './assets/styles/tailwind.css';
 
 import { CssBaseline } from '@mui/material';
 import { createTheme, StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
