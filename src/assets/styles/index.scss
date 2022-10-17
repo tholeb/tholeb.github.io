@@ -1,31 +1,4 @@
-@font-face {
-	font-family: "Bebasneue";
-	src: url("../fonts/BebasNeue-Regular.otf");
-}
-
-@font-face{
-	font-family:"suisse";
-	font-display:swap;
-	src:url("../font/SuisseIntl-Book-WebS.woff2") format("woff2"), url("../font/SuisseIntl-Book-WebS.woff") format("woff");
-	font-weight:400;
-	font-style:normal
-}
-
-@font-face{
-	font-family:"suisse";
-	font-display:swap;
-	src:url("../font/SuisseIntl-Book-WebM.woff2") format("woff2"),
-	url("../font/SuisseIntl-Book-WebM.woff") format("woff");
-	font-weight:700;
-	font-style:normal
-}
-@font-face{
-	font-family: "suisse";
-	font-display:swap;
-	src:url("../font/SuisseIntl-Book-WebM.woff2") format("woff2"), url("../font/SuisseIntl-Book-WebM.woff") format("woff");
-	font-weight:900;
-	font-style:normal
-}
+@import './_fonts.scss';
 
 .acrylic {
   	background: rgba(18,18,18,0.3);
@@ -35,7 +8,7 @@
 
 .outlinedText {
   	-webkit-text-stroke: 1px;
-  	-webkit-text-fill-color: #121212;
+  	-webkit-text-fill-color: transparent;
 }
 
 .font-suisse {
