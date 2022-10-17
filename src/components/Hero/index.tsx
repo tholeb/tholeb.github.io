@@ -13,33 +13,34 @@ const Hero = () => {
 				justifyContent="center"
 				style={{ minHeight: '100vh' }}
 			>
-				<Grid item>
+				<Grid item className="w-full">
 					<Box sx={{ my: 2 }}>
 						<Typography
-							variant="h6"
-							component="h6"
-							className="font-suisse uppercase font-black text-white text-left"
+							variant="h2"
+							component="h2"
+							className="font-suisse uppercase font-black outlinedText text-center"
 						>
 							Welcome, my name is
 						</Typography>
 					</Box>
 				</Grid>
-				<Grid item>
+				<Grid item className="w-full">
 					<Box sx={{ my: 2 }}>
 						<Typography
-							variant="h1"
-							component="h1"
-							className="font-suisse uppercase font-black outlinedText text-fill-[#121212] text-left"
+							variant="h2"
+							component="h2"
+							className="font-suisse uppercase font-black outlinedText text-center"
 						>
 							Thomas
 						</Typography>
 					</Box>
 				</Grid>
-				<Grid item>
+				<Grid item className="w-full">
 					<Box sx={{ my: 2 }}>
 						<Typography
 							variant="h2"
-							className="font-suisse uppercase font-black text-white text-left"
+							component="h2"
+							className="font-suisse uppercase font-black outlinedText text-center"
 						>
 							IT student interested in System administration
 						</Typography>
