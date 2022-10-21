@@ -11,7 +11,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['About me', 'Experience', 'Projects'];
 
 const NavBar = (props: any, ref: any) => {
 	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);

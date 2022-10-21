@@ -1,9 +1,13 @@
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { Box, Fab, Fade, Toolbar, useScrollTrigger } from '@mui/material';
+import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
+import Fab from '@mui/material/Fab';
+import Fade from '@mui/material/Fade';
 import Slide from '@mui/material/Slide';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 import * as React from 'react';
 
+import Footer from '../Footer';
 import NavBar from '../NavBar';
 
 function ScrollTop(props: Props) {
@@ -66,6 +70,7 @@ export default function HideAppBar({ children }: Props) {
 				</Fab>
 			</ScrollTop>
 			{children}
+			<Footer />
 		</React.Fragment>
 	);
 }

@@ -1,5 +1,7 @@
-import { Copyright } from '@mui/icons-material';
-import { Box, Container, Link, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 import React from 'react';
 
 const index = () => {
@@ -15,8 +17,8 @@ const index = () => {
 			<Container maxWidth="sm">
 				<Typography variant="body2" color="text.secondary" align="center">
 					{'Copyright © '}
-					<Link color="inherit" href="https://mui.com/">
-						Your Website
+					<Link color="inherit" href="https://tholeb.fr	">
+						tholeb
 					</Link>{' '}
 					{new Date().getFullYear()}
 					{'.'}
