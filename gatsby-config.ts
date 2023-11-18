@@ -25,6 +25,14 @@ const config: GatsbyConfig = {
 			options: {},
 		},
 		{
+			resolve: "gatsby-plugin-react-svg",
+			options: {
+				rule: {
+					include: /assets/ // See below to configure properly
+				}
+			}
+		},
+		{
 			resolve: "gatsby-source-graphql",
 			options: {
 				typeName: "GitHub",
@@ -34,9 +42,9 @@ const config: GatsbyConfig = {
 					Authorization: `bearer ${process.env.GITHUB_TOKEN}`
 				},
 				fetchOptions: {},
-				variables: {
-					username: "tholeb"
-				}
+				// variables: {
+				// 	username: "tholeb"
+				// }
 			}
 		},
 		{

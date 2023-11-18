@@ -1,11 +1,18 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-// import { Flex, Item } from "react-flex-ready";
-// import Container from "components/common/Container";
-// import Card from "components/common/Card";
-// import starIcon from "assets/icons/star.svg";
-// import forkIcon from "assets/icons/fork.svg";
-// import { Wrapper, Content, Stats } from "./styles";
+import ProjectCard from "@lekoarts/gatsby-theme-cara/src/components/project-card";
+import StarIcon from "../../assets/icons/star.svg";
+import ForkIcon from "../../assets/icons/fork.svg";
+import "./styles.css";
+
+
+const couples = [
+	["#D4145A", "#FBB03B"],
+	["#662D8C", "#ED1E79"],
+	["#009245", "#FCEE21"],
+	["#D585FF", "#00FFEE"],
+]
+
 
 export default () => {
   const {
@@ -20,7 +27,7 @@ export default () => {
         github {
           viewer {
             repositories(
-              first: 16
+              first: 6
               orderBy: { field: STARGAZERS, direction: DESC }
             ) {
               edges {
@@ -41,51 +48,36 @@ export default () => {
       }
     `
   );
-  /* return (
-    <Wrapper as={Container} id="projects">
-      <h2>Projects</h2>
-      <Flex col={4}>
-        {edges.map(
-          ({ node: { id, url, name, description, stargazers, forkCount } }) => (
-            <Item
-              key={id}
-              col={4}
-              colTablet={6}
-              colMobile={12}
-              marginBottom={30}
-              gap={1}
-              stretch
-            >
-              <Card as="a" href={url} target="_blank" rel="noopener noreferrer">
-                <Content>
-                  <h4>{name}</h4>
-                  <p>{description}</p>
-                </Content>
-                <Stats>
-                  <div>
-                    <img src={starIcon} alt="stars" />
-                    <span>{stargazers.totalCount}</span>
-                  </div>
-                  <div>
-                    <img src={forkIcon} alt="forks" />
-                    <span>{forkCount}</span>
-                  </div>
-                </Stats>
-              </Card>
-            </Item>
-          )
-        )}
-      </Flex>
-    </Wrapper>
-  ); */
   return (
-    <>
-      <h2>Projects</h2>
+	<>
         {edges.map(
-          ({ node: { id, url, name, description, stargazers, forkCount } }) => (
-			<p id={id}>{name} {description} {stargazers.totalCount} {forkCount}</p>
-          )
+  			({ node: { id, url, name, description, stargazers, forkCount } }: { node: { id: string, url: string, name: string, description: string, stargazers: { totalCount: number }, forkCount: number } }) => {
+				const getRandomColor = () => {
+					const randomIndex = Math.floor(Math.random() * couples.length);
+					return couples[randomIndex];
+				};
+			
+				return (
+					<ProjectCard
+						key={id}
+						title={name}
+						link={url}
+						bg={`linear-gradient(to right, ${getRandomColor()[0]} 0%, ${getRandomColor()[1]}  100%)`}
+						>
+						{description}
+						<div className="container">
+							<span>
+								<StarIcon/>
+								<p>{stargazers.totalCount}</p>
+							</span>
+							<span>
+								<ForkIcon/>
+								<p>{forkCount}</p>
+							</span>
+						</div>
+					</ProjectCard>)
+			}
         )}
-    </>
+	</>
   );
 };
