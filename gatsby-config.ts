@@ -39,7 +39,7 @@ const config: GatsbyConfig = {
 				fieldName: "github",
 				url: "https://api.github.com/graphql",
 				headers: {
-					Authorization: `bearer ${process.env.GITHUB_TOKEN}`
+					Authorization: `bearer ${process.env.GH_TOKEN}`
 				},
 				fetchOptions: {},
 				// variables: {
