@@ -120,10 +120,11 @@ export const DATA = {
       href: "https://visionrp.fr",
       dates: "April 2024 - Today",
       active: true,
-      description: "Developper (mainly frontend) of a FiveM server for a roleplay community for more than 2000 players per day and 23000 discord members",
+      description: "Developper (mainly frontend) of a FiveM server for a roleplay community for more than 2000 players per day and 23000+ discord members",
       technologies: [
         "React.js",
         "Lua",
+		"SQL"
       ],
       links: [
 		{
@@ -134,7 +135,7 @@ export const DATA = {
 		{
           type: "Discord",
           href: "https://visionrp.fr",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.discord className="size-3" />,
         }
 	  ],
       image: "",
