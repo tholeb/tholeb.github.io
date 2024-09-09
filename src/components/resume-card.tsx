@@ -1,13 +1,14 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+
+import { Badge } from "@/components/ui/badge";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -60,19 +61,6 @@ export const ResumeCard = ({
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
-                {badges && (
-                  <span className="inline-flex gap-x-1">
-                    {badges.map((badge, index) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xs"
-                        key={index}
-                      >
-                        {badge}
-                      </Badge>
-                    ))}
-                  </span>
-                )}
                 <ChevronRightIcon
                   className={cn(
                     "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
@@ -100,7 +88,21 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {description}
+              	{description}
+				<br /> <br />
+				{badges && (
+                  <span className="inline-flex gap-x-1">
+                    {badges.map((badge, index) => (
+                      <Badge
+                        variant="secondary"
+                        className="align-middle text-xs"
+                        key={index}
+                      >
+                        {badge}
+                      </Badge>
+                    ))}
+                  </span>
+                )}
             </motion.div>
           )}
         </div>
