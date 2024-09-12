@@ -153,14 +153,14 @@ export const DATA = {
 		],
 		links: [
 			{
-			type: "Website",
-			href: "https://visionrp.fr",
-			icon: <Icons.globe className="size-3" />,
+				type: "Website",
+				href: "https://visionrp.fr",
+				icon: <Icons.globe className="size-3" />,
 			},
 			{
-			type: "Discord",
-			href: "https://discord.com/invite/visionrp",
-			icon: <Icons.discord className="size-3" />,
+				type: "Discord",
+				href: "https://discord.com/invite/visionrp",
+				icon: <Icons.discord className="size-3" />,
 			}
 		],
 		image: "https://img.tholeb.fr/u/3178abce-d5d8-493c-9ada-6e961be27a1b.png",

@@ -3,18 +3,23 @@
 import { useEffect, useState } from 'react';
 
 import BlurFade from './magicui/blur-fade';
+import { Icons } from './icons';
 import { ProjectCard } from './project-card';
 import axios from 'axios';
 
 const BLUR_FADE_DELAY = 0.04;
 
 interface Repo {
-  id: string;
-  name: string;
-  url: string;
-  description: string;
-  stargazers: { totalCount: number };
-  forkCount: number;
+	repositoryTopics: {
+		nodes: { topic: { name: string } }[];
+	};
+	id: string;
+	name: string;
+	url: string;
+	createdAt: string;
+	description: string;
+	stargazers: { totalCount: number };
+	forkCount: number;
 }
 
 const Repositories: React.FC = () => {
@@ -41,10 +46,18 @@ const Repositories: React.FC = () => {
                         name
                         url
                         description
+                        createdAt
                         stargazers {
                           totalCount
                         }
                         forkCount
+                        repositoryTopics(first:5) {
+                          nodes {
+                            topic {
+                              name
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -84,12 +97,19 @@ const Repositories: React.FC = () => {
 			<ProjectCard
 				key={r.id}
 				href={r.url}
-				tags={[]}
 				forksCount={r.forkCount}
 				starsCount={r.stargazers.totalCount}
 				title={r.name}
 				description={r.description}
-				dates={""}
+				links={[
+					{
+						href: r.url,
+						icon: <Icons.github className='size-3'/>,
+						type: "Repo",
+					},
+				]}
+				tags={r.repositoryTopics.nodes.map((node: any) => node.topic.name)}
+				dates={new Date(r.createdAt).toLocaleDateString()}
 			/>
 		</BlurFade>
 	))}
