@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -6,10 +5,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+
+import { Badge } from "@/components/ui/badge";
+import { Icons } from "./icons";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { cn } from "@/lib/utils";
 
 interface Props {
   title: string;
@@ -17,6 +19,8 @@ interface Props {
   description: string;
   dates: string;
   tags: readonly string[];
+  forksCount?: number;
+  starsCount?: number;
   link?: string;
   image?: string;
   video?: string;
@@ -34,6 +38,8 @@ export function ProjectCard({
   description,
   dates,
   tags,
+  forksCount,
+  starsCount,
   link,
   image,
   video,
@@ -96,6 +102,20 @@ export function ProjectCard({
             ))}
           </div>
         )}
+		<div className="mt-2 flex flex-wrap gap-1">
+			{starsCount !== undefined && <Badge
+				className="px-1 py-0 gap-1 text-[10px]"
+				variant="secondary"
+				>
+				{starsCount} <Icons.star className="size-3" />
+			</Badge>}
+			{forksCount !== undefined && <Badge
+				className="px-1 py-0 gap-1 text-[10px]"
+				variant="secondary"
+				>
+				{forksCount} <Icons.gitFork className="size-3" />
+			</Badge>}
+		</div>
       </CardContent>
       <CardFooter className="px-2 pb-2">
         {links && links.length > 0 && (

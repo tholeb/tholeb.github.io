@@ -17,6 +17,7 @@ interface ResumeCardProps {
   subtitle?: string;
   href?: string;
   badges?: readonly string[];
+  links?: readonly { text: string; url: string }[];
   period: string;
   description?: string;
 }
@@ -27,6 +28,7 @@ export const ResumeCard = ({
   subtitle,
   href,
   badges,
+  links,
   period,
   description,
 }: ResumeCardProps) => {
@@ -88,8 +90,23 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              	{description}
-				<br /> <br />
+				{description}
+				{links && (<><br /> <br /></>)}
+				{links && (
+                  <span className="inline-flex gap-x-1">
+                    {links.map((link, index) => (
+                      <Badge
+                        variant="default"
+                        className="align-middle text-xs"
+                        link={link.url}
+                        key={index}
+                      >
+                        {link.text}
+                      </Badge>
+                    ))}
+                  </span>
+                )}
+				{badges && (<><br /> <br /></>)}
 				{badges && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (

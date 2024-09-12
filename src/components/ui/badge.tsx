@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -25,12 +26,19 @@ const badgeVariants = cva(
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+    VariantProps<typeof badgeVariants> {link?: string;}
 
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
-  )
+function Badge({ className, variant, link, ...props }: BadgeProps) {
+	const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+		if (link) {
+			e.preventDefault();
+			window.open(link, "_blank");
+		}
+	};
+
+	return (
+		<div className={cn(badgeVariants({ variant }), className)} onClick={handleClick} {...props} />
+	)
 }
 
 export { Badge, badgeVariants }

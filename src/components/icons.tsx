@@ -1,4 +1,4 @@
-import { GlobeIcon, MailIcon } from "lucide-react";
+import { GitFork, GlobeIcon, MailIcon, Star } from "lucide-react";
 
 import { DiscordLogoIcon } from "@radix-ui/react-icons";
 
@@ -7,6 +7,8 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 export const Icons = {
 	globe: (props: IconProps) => <GlobeIcon {...props} />,
 	email: (props: IconProps) => <MailIcon {...props} />,
+	gitFork: (props: IconProps) => <GitFork {...props} />,
+	star: (props: IconProps) => <Star {...props} />,
 	linkedin: (props: IconProps) => (
 	<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
 		<title>LinkedIn</title>

@@ -8,6 +8,7 @@ import { HackathonCard } from "@/components/hackathon-card";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { ProjectCard } from "@/components/project-card";
+import Repositories from "@/components/Repositories";
 import { ResumeCard } from "@/components/resume-card";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -57,7 +58,7 @@ export default function Page() {
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
-              key={work.company}
+              key={id}
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
@@ -82,7 +83,7 @@ export default function Page() {
           </BlurFade>
           {DATA.education.map((education, id) => (
             <BlurFade
-              key={education.school}
+              key={id}
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
               <ResumeCard
@@ -93,6 +94,9 @@ export default function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+				description={education.description}
+				links={education.links}
+				badges={education.badges}
               />
             </BlurFade>
           ))}
@@ -106,7 +110,7 @@ export default function Page() {
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <Badge variant="default" key={skill}>{skill}</Badge>
               </BlurFade>
             ))}
           </div>
@@ -150,6 +154,7 @@ export default function Page() {
                 />
               </BlurFade>
             ))}
+			<Repositories />
           </div>
         </div>
       </section>
