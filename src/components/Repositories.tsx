@@ -37,7 +37,7 @@ const Repositories: React.FC = () => {
               query {
                 viewer {
                   repositories(
-                    first: 6
+                    first: 4
                     orderBy: { field: STARGAZERS, direction: DESC }
                   ) {
                     edges {
