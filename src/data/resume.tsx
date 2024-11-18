@@ -57,6 +57,22 @@ export const DATA = {
 
 	work: [
 		{
+			company: "Sopra Steria I2S",
+			href: "#",
+			badges: [
+				"Linux",
+				"Windows",
+				"Docker",
+				"iso"
+			],
+			location: "Nantes, Pays de la Loire, France",
+			title: "Sysadmin",
+			logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSRCNeQJckbt_BzYSbVnoCqe_V6RUc1JqISA&s",
+			start: "October 2024",
+			end: "today",
+			description: "Multiple subjects, evolving around tools, and iso images for Windows 11",
+		},
+		{
 			company: "Thales NL",
 			href: "#",
 			badges: [
@@ -69,7 +85,7 @@ export const DATA = {
 			],
 			location: "Engelo, Netherlands",
 			title: "Research project on Kubernetes, OpenFeature and Helm",
-			logoUrl: "https://pbs.twimg.com/profile_images/1609851367299874819/Jr479xkK_400x400.jpg",
+			logoUrl: "https://lh3.googleusercontent.com/LNLrNcfMYAkpQX7tfGmjuUmWwEQip5qOYEWUm29pqNgQQDGIo0usds54TZzN_ZIfzseax4CHqu2VB5t5vPa-",
 			start: "May 2024",
 			end: "Oct 2024",
 			description: "Research project on Kubernetes, OpenFeature and Helm. I had to deploy a kubernetes cluster implementing OpenFeature in a Express application. I used Unleash as a provider.",
@@ -157,11 +173,11 @@ export const DATA = {
 				href: "https://visionrp.fr",
 				icon: <Icons.globe className="size-3" />,
 			},
-			{
+			/* {
 				type: "Discord",
 				href: "https://discord.com/invite/visionrp",
 				icon: <Icons.discord className="size-3" />,
-			}
+			} */
 		],
 		image: "https://img.tholeb.fr/u/3178abce-d5d8-493c-9ada-6e961be27a1b.png",
 		video: "",
