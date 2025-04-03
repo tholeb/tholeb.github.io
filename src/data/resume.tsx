@@ -162,6 +162,7 @@ export const DATA = {
 		title: "FiveM",
 		dates: "April 2024 - Today",
 		active: true,
+		href: "#!",
 		description: "Developper for FiveM servers, serving more than 3000 players per day for 30k+ discord members. I am mainly doing frontend work (tsx, scss) and managing windows/linux servers (monitoring). ",
 		technologies: [
 			"React.js",
