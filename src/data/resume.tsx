@@ -57,20 +57,22 @@ export const DATA = {
 
 	work: [
 		{
-			company: "Sopra Steria I2S",
+			company: "Sopra Steria Infrastructure and Security Services",
 			href: "#",
 			badges: [
 				"Linux",
 				"Windows",
 				"Docker",
-				"iso"
+				"sysprep",
+				"Zabbix",
+				"WAF"
 			],
 			location: "Nantes, Pays de la Loire, France",
 			title: "Sysadmin",
 			logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSRCNeQJckbt_BzYSbVnoCqe_V6RUc1JqISA&s",
 			start: "October 2024",
 			end: "today",
-			description: "Multiple subjects, evolving around tools, and iso images for Windows 11",
+			description: "Multiple subjects, evolving around tooling, generalizing Windows 11, and Web Application Firewall",
 		},
 		{
 			company: "Thales NL",
@@ -157,20 +159,21 @@ export const DATA = {
 	],
 	projects: [
 	{
-		title: "Vision (FiveM server)",
-		href: "https://visionrp.fr",
+		title: "FiveM",
 		dates: "April 2024 - Today",
 		active: true,
-		description: "Developper (mainly frontend) of a FiveM server for a roleplay community for more than 2000 players per day and 23000+ discord members",
+		description: "Developper for FiveM servers, serving more than 3000 players per day for 30k+ discord members. I am mainly doing frontend work (tsx, scss) and managing windows/linux servers (monitoring). ",
 		technologies: [
 			"React.js",
 			"Lua",
-			"SQL"
+			"SQL",
+			"PromQL",
+			"Grafana"
 		],
 		links: [
 			{
-				type: "Website",
-				href: "https://visionrp.fr",
+				type: "NoFace",
+				href: "https://discord.gg/dAczvDSUb9",
 				icon: <Icons.globe className="size-3" />,
 			},
 			/* {
@@ -179,7 +182,7 @@ export const DATA = {
 				icon: <Icons.discord className="size-3" />,
 			} */
 		],
-		image: "https://img.tholeb.fr/u/3178abce-d5d8-493c-9ada-6e961be27a1b.png",
+		image: "https://img.utdstc.com/icon/bcb/fc5/bcbfc5ae3d074d8734b9f51e64f7e95d4325485e0c51661dcf3167e45d768a8d:200",
 		video: "",
 	},
 	{
