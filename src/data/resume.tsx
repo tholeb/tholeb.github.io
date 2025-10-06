@@ -7,7 +7,7 @@ export const DATA = {
 	url: "https://tholeb.fr",
 	location: "France",
 	locationLink: "",
-	description: "Passionate student in systems administration and emerging technologies, currently in my fifth year at Polytech Nantes.",
+	description: "Recent graduate in IT. Focusing on systems administration and emerging technologies",
 	summary: "Self taught system administrator and software developer with a passion for emerging technologies. I have experience with a wide range of technologies and programming languages. I am a quick learner and I am always looking to improve my skills.",
 	avatarUrl: "",
 	skills: [
@@ -72,7 +72,7 @@ export const DATA = {
 			logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSRCNeQJckbt_BzYSbVnoCqe_V6RUc1JqISA&s",
 			start: "October 2024",
 			end: "today",
-			description: "Multiple subjects, evolving around tooling, generalizing Windows 11, and Web Application Firewall",
+			description: "Multiple subjects, evolving around linux tooling such as rundeck, syspreping Windows 11, and Web Application Firewall",
 		},
 		{
 			company: "Thales NL",
@@ -135,7 +135,7 @@ export const DATA = {
 			school: "Polytech Nantes",
 			href: "#",
 			degree: "Master in Computer Science",
-			logoUrl: "https://media.licdn.com/dms/image/v2/C4E0BAQGGV9BX_tTmIw/company-logo_200_200/company-logo_200_200/0/1631319858106?e=2147483647&v=beta&t=-pGskuKmeThHwEce9NCFEvg5yu5i4ovY8ifFl8xNBDM",
+			logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUNaH8YhcBS1C6wPhDB_tK47tvgnPX0dF0Q&s",
 			description: 'Studied computer science, networks, systems administration, software development, and more. I participated in various projects, such as the Google Hashcode 2022 (Polytech\'s instance), or the creation of a batman adhoc network using Ansible.',
 			badges: ["Git", "UML", "SQL", "C/C++", "Python", "Node.JS"],
 			links: [
@@ -172,11 +172,11 @@ export const DATA = {
 			"Grafana"
 		],
 		links: [
-			{
+			/* {
 				type: "NoFace",
 				href: "https://discord.gg/dAczvDSUb9",
 				icon: <Icons.globe className="size-3" />,
-			},
+			}, */
 			/* {
 				type: "Discord",
 				href: "https://discord.com/invite/visionrp",
@@ -187,11 +187,11 @@ export const DATA = {
 		video: "",
 	},
 	{
-		title: "Home server (Raspberry Pi 4)",
+		title: "Selfhosted cloud",
 		href: "#",
 		dates: "2020 - Today",
 		active: true,
-		description: "I have a home server that I use for various purposes, such as containers, Nextcloud, a VPN server, and more.",
+		description: "Home server used for various purposes, such as containers, Nextcloud, a VPN server, and more.",
 		technologies: [
 			"Ansible",
 			"Linux",
