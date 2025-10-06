@@ -49,7 +49,6 @@ export const DATA = {
 			name: "Send Email",
 			url: "mailto:contact@tholeb.fr",
 			icon: Icons.email,
-
 			navbar: true,
 		},
 	},
