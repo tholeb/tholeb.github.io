@@ -1,0 +1,39 @@
+<svg viewBox="0 0 350 24" xmlns="http://www.w3.org/2000/svg" style="cursor:pointer">
+    <style>
+        text {
+            dominant-baseline: middle;
+            text-anchor: middle;
+            fill: #3b82f6; /* This is the hex for text-blue-500 */
+            font-family: sans-serif;
+            cursor: pointer;
+            font-size: 1.25rem;
+            line-height: 1.625;
+            letter-spacing: 2%;
+        }
+        text:hover {
+            text-decoration: underline;
+            fill: #2563eb; /* text-blue-600 */
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const addr = atob("Y29udGFjdEB0aG9sZWIuZnI=");
+            const mailtag = document.getElementById("dsojqhbd");
+            if (mailtag) {
+                mailtag.textContent = addr; // Use textContent for SVG
+            }
+        });
+
+        function openMail(e) {
+            const addr = atob("Y29udGFjdEB0aG9sZWIuZnI=");
+            window.location.href = "mailto:" + addr;
+        }
+    </script>
+
+    <g onclick="openMail(event)">
+        <text x="50%" y="50%">
+            send me an email : <tspan id="dsojqhbd"></tspan>
+        </text>
+    </g>    
+</svg>
